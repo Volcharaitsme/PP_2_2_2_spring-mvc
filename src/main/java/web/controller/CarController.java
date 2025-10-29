@@ -26,6 +26,7 @@ public class CarController {
         List<Car> cars = carService.getCars(count);
         modelMap.addAttribute("cars", cars);
         modelMap.addAttribute("countCars", cars.size());
+        modelMap.addAttribute("requestedCount", count);
         return "cars";
     }
 }
